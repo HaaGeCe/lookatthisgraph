@@ -22,3 +22,5 @@ Required packages: graphicx, tikz
 
 The size of Nickelback with the graph is always \textwidth.
 
+See example.pdf for an example.
+
