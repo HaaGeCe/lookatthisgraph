@@ -1,0 +1,23 @@
+\ProvidesPackage{lookatthisgraph}
+
+%% "Look at this graph!" for tikz figures
+\newcommand{\lookatthisgraph}[1]{
+	%\newcommand{\reshit}[1]{\resizebox{0.285\textwidth}{.192\textwidth}{\input{#1}}} % use this if inner sep and outer sep are non-zero
+	\newcommand{\reshit}[1]{\resizebox{0.295\textwidth}{.21\textwidth}{\input{#1}}}
+	\begin{tikzpicture}
+		\node[anchor=south west] (nickelback) at (0,0) {\includegraphics[width=\textwidth]{graph.PNG}};
+		\begin{scope}[x={(nickelback.south east)},y={(nickelback.north west)}]
+			\node[anchor=south west,rotate=14.5,fill=white, inner sep=0pt, outer sep=0pt] at (0.565,0.23) {\reshit{#1}};
+		\end{scope}	
+	\end{tikzpicture}
+}
+
+%% "Look at this graph!" for non-tikz figures
+\newcommand{\lookatthisgraphGFX}[1]{
+	\begin{tikzpicture}
+		\node[anchor=south west] (nickelback) at (0,0) {\includegraphics[width=\textwidth]{graph.PNG}};
+		\begin{scope}[x={(nickelback.south east)},y={(nickelback.north west)}]
+			\node[anchor=south west,rotate=14.5,fill=white, inner sep=0pt, outer sep=0pt] at (0.565,0.23) {\includegraphics[width=0.295\textwidth,height=.21\textwidth]{#1}};
+		\end{scope}	
+	\end{tikzpicture}
+}
