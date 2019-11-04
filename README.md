@@ -1,4 +1,4 @@
-# lookatthisgraph
+# Look at this graph! 
 
 DESCRIPTION:
 	"Look at this graph!" - Nickelback
